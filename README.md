@@ -73,7 +73,3 @@ Wallet Token là một ứng dụng cho phép người dùng gửi và nhận to
 
 Nếu bạn muốn đóng góp vào dự án, vui lòng tạo một pull request hoặc mở một issue trên GitHub để thảo luận về các thay đổi hoặc cải tiến.
 
-## Giấy phép
-
-Dự án này được cấp phép theo [Giấy phép MIT](LICENSE).
-
