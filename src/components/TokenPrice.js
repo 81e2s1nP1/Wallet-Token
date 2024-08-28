@@ -59,7 +59,6 @@ function TokenPrice() {
   return (
     <div className="token-price-container">
       <h1>Ethereum Price Chart</h1>
-      <h3>Current Ethereum Price: 2,720.51 USD</h3>
       {loading ? (
         <div>
           <p>Loading price data...</p>

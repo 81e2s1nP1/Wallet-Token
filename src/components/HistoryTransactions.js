@@ -17,6 +17,7 @@ function HistoryTransactions() {
       try {
         const address = '0x82cb3d95FD846Ae08f2654c78417e0E41264D6aa';
         const response = await axios.get(`${ETHERSCAN_API_URL}?module=account&action=tokentx&address=${address}&sort=desc&apikey=${ETHERSCAN_API_KEY}`);
+        console.log(response);
         setTransactions(response.data.result.slice(0, 5)); // Keep only the 5 most recent transactions
         setLoading(false);
       } catch (error) {
@@ -56,7 +57,7 @@ function HistoryTransactions() {
               <td>{tx.to.slice(0, 6) + '...' + tx.to.slice(-4)}</td>
               <td>{(tx.value / 1e18).toFixed(4)} STK</td>
               <td>{tx.isError === '0' ? 'Failed' : 'Success'}</td>
-              <td>{(tx.gasUsed * tx.gasPrice / 1e18).toFixed(18)} ETH</td>
+              <td>{(tx.gasUsed * tx.gasPrice / 1e18).toFixed(18).slice(0, 7)} ETH</td>
               <td>{(tx.gasPrice / 1e9).toFixed(9)} Gwei</td>
             </tr>
           ))}

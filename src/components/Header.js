@@ -36,7 +36,7 @@ function Header() {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/history-gransactions">
-                  <i className="fa-solid fa-scroll"></i> HISTORY-TRANSACTIONS
+                  <i className="fa-solid fa-scroll"></i> HIST-TRANSACTIONS
                 </NavLink>
               </li>
               <li className="nav-item">
