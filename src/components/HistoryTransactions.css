@@ -1,0 +1,84 @@
+.history-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.7); /* Nền màu đen mờ */
+  color: #fff; /* Màu chữ trắng */
+  border-radius: 10px; /* Bo tròn góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+  margin-top: 50px;
+}
+
+.history-container h1 {
+  font-size: 2rem;
+  color: #ff6600; /* Màu chữ cam */
+  text-align: center; /* Căn giữa tiêu đề */
+  margin-bottom: 20px;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  table-layout: fixed; /* Ensure consistent column widths */
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #ff6600; /* Đường viền màu cam */
+  padding: 10px;
+  text-align: left;
+  overflow: hidden; /* Prevent content overflow */
+  a {
+    text-Decoration:none
+  }
+}
+
+.history-table th {
+  background-color: #333; /* Màu nền của tiêu đề */
+  color: #fff; /* Màu chữ tiêu đề */
+  font-weight: bold;
+}
+
+.history-table tr:nth-child(even) {
+  background-color: #222; /* Màu nền của hàng chẵn */
+}
+
+.history-table tr:hover {
+  background-color: #444; /* Màu nền khi di chuột qua hàng */
+}
+
+/* Định dạng cho địa chỉ và mã giao dịch */
+.address-truncated,
+.tx-hash-truncated {
+  display: inline-block;
+  position: relative;
+  max-width: 150px; /* Điều chỉnh kích thước tùy ý */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Nội dung đầy đủ */
+.address-truncated::after,
+.tx-hash-truncated::after {
+  content: attr(data-full);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+  background-color: rgba(0, 0, 0, 0.9); /* Nền hiện đầy đủ thông tin */
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #ff6600; /* Đường viền màu cam */
+  display: none; /* Ẩn nội dung đầy đủ */
+  z-index: 1; /* Đảm bảo nội dung đầy đủ nằm trên các phần tử khác */
+}
+
+.address-truncated:hover::after,
+.tx-hash-truncated:hover::after {
+  display: block; /* Hiện nội dung đầy đủ khi hover */
+}

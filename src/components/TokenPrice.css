@@ -1,0 +1,46 @@
+/* TokenPrice.css */
+.token-price-container {
+  text-align: center; /* Center-align the text */
+  color: white; /* White text color */
+  padding: 20px; /* Padding around the content */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to make text stand out */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 600px; /* Max width of the container */
+  margin: 0 auto; /* Center container horizontally */
+  margin-top: 100px;
+}
+
+.token-price-container h1 {
+  font-size: 2rem; /* Larger font size for the heading */
+  margin-bottom: 10px; /* Margin below the heading */
+}
+
+.token-price-container p {
+  font-size: 1.5rem; /* Font size for the price */
+  margin: 0; /* Remove margin for the paragraph */
+}
+
+.loading-bar {
+  width: 100px; /* Width of the loading bar */
+  height: 5px; /* Height of the loading bar */
+  background-color: #3498db; /* Color of the loading bar */
+  border-radius: 5px; /* Rounded corners for the loading bar */
+  margin: 10px auto; /* Center align and margin */
+  position: relative;
+  overflow: hidden;
+  animation: loading 1s infinite; /* Add animation for the loading effect */
+}
+
+@keyframes loading {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+.chart-container {
+  position: relative;
+  height: 400px; /* Adjust the height of the chart */
+  width: 100%; /* Full width of the container */
+  max-width: 600px; /* Optional: set a max-width to match the container width */
+  margin: 0 auto; /* Center the chart horizontally */
+}
+

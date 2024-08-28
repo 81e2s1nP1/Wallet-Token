@@ -1,0 +1,27 @@
+/* Ensure the body takes up the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Main container (if needed, otherwise use body directly) */
+  .app-container {
+    flex: 1; /* Ensures this takes up the remaining space between header and footer */
+  }
+  
+  /* Footer styling */
+  .footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Center-align text */
+    padding: 10px 0; /* Vertical padding */
+  }
+  
+  
